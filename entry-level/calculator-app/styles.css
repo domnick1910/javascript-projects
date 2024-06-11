@@ -4,3 +4,28 @@ button {
     background-color: green;
     color: white;
 }
+
+.calculator-container {
+    display: grid;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    width: 18rem;
+    height: 26.5rem;
+    columns: 4;
+    gap: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.699);
+    border: 1px solid black;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.calculator-input {
+    grid-column: span 4;
+}
+
+.calculator-numbers {
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+}
