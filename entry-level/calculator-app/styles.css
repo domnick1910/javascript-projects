@@ -10,7 +10,7 @@ button {
     margin: 0.5rem;
     padding: 0.5rem;
     width: 18rem;
-    height: 26.5rem;
+    height: 27rem;;
     columns: 4;
     gap: 0.5rem;
     background-color: rgba(255, 255, 255, 0.699);
@@ -21,6 +21,8 @@ button {
 
 .calculator-input {
     grid-column: span 4;
+    width: auto;
+    height: 4rem;
 }
 
 .calculator-numbers {
@@ -28,4 +30,10 @@ button {
     justify-content: center;
     width: 4rem;
     height: 4rem;
+}
+
+.calculator-zero {
+    width: auto;
+    height: 4rem;
+    grid-column: span 3;
 }
