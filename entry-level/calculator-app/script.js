@@ -14,7 +14,6 @@ const btnClear = document.getElementById("clear");
 const btnNumbers = document.querySelectorAll(".calculator-numbers");
 
 let oldNumber = 0;
-let currentNum = 0; // NIe je potrebne, cislo dostavam z elementu
 let operation = '';
 let result = 0;
 
@@ -29,7 +28,13 @@ btnNumbers.forEach(button => {
 btnPlus.addEventListener("click", ()=>{
     oldNumber = inputField.innerText;
     operation = '+';
-    clearInput();
+    inputField.innerText = '';
+});
+
+btnMinus.addEventListener("click", ()=>{
+    oldNumber = inputField.innerText;
+    operation = '-';
+    inputField.innerText = '';
 });
 
 btnResult.addEventListener("click", ()=>{
@@ -38,6 +43,8 @@ btnResult.addEventListener("click", ()=>{
     if (oldNumber != '' && operation != '' && inputField.innerText != '') {
         switch(operation) {
             case '+' : resultNumber = parseInt(inputField.innerText) + parseInt(oldNumber);
+                break;
+            case '-' : resultNumber = parseInt(inputField.innerText) - parseInt(oldNumber);
                 break;
         }
 
