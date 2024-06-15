@@ -28,13 +28,24 @@ btnNumbers.forEach(button => {
 btnPlus.addEventListener("click", ()=>{
     oldNumber = inputField.innerText;
     operation = '+';
-    inputField.innerText = '';
 });
 
 btnMinus.addEventListener("click", ()=>{
     oldNumber = inputField.innerText;
     operation = '-';
     inputField.innerText = '';
+});
+
+btnMultiply.addEventListener("click", ()=>{
+    oldNumber = inputField.innerText;
+    operation = '*';
+    inputField.innerText = '';
+});
+
+btnDivide.addEventListener("click", ()=>{
+    oldNumber = inputField.innerText;
+    operation = '/';
+    inputField.innerText = ''; 
 });
 
 btnResult.addEventListener("click", ()=>{
@@ -46,6 +57,10 @@ btnResult.addEventListener("click", ()=>{
                 break;
             case '-' : resultNumber = parseInt(inputField.innerText) - parseInt(oldNumber);
                 break;
+            case '*' : resultNumber = parseInt(inputField.innerText) * parseInt(oldNumber);
+                break;
+            case '/' : resultNumber = parseInt(inputField.innerText) / parseInt(oldNumber);
+                break;  
         }
 
         inputField.innerText = resultNumber;
